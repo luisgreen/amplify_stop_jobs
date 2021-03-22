@@ -1,0 +1,19 @@
+name: 'Aws Amplify Previous Jobs Stopper'
+description: 'Action for stopping previous Job Runs for an specific branch/appId'
+branding:
+  color: yellow
+  icon: at-sign
+inputs:
+  appId:
+    description: Amplify Application ID
+    required: true
+  branchName:
+    description: Amplify Application branch to deploy
+    required: true
+  region:
+    description: Region of the Amplify Application
+    required: true
+
+runs:
+  using: 'node12'
+  main: './dist/index.js'
